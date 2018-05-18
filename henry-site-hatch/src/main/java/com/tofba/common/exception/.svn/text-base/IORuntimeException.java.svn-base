@@ -1,0 +1,63 @@
+/**
+ * Copyright © 2015-2017 ToFBA E-commerce logistics Co. LTD All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * ShenZhen ToFBA E-commerce logistics Co., LTD.
+ * No body can copy or modify any part of this source without the permission of
+ * ShenZhen ToFBA E-commerce logistics Co., LTD.
+ *   _________    ___   ________  ______        _       
+ *  |  _   _  | .'   `.|_   __  ||_   _ \      / \      
+ *  |_/ | | \_|/  .-.  \ | |_ \_|  | |_) |    / _ \     
+ *      | |    | |   | | |  _|     |  __'.   / ___ \    
+ *     _| |_   \  `-'  /_| |_     _| |__) |_/ /   \ \_  
+ *    |_____|   `.___.'|_____|   |_______/|____| |____|                                             
+ */
+package com.jiufang.common.exception;
+
+import com.jiufang.common.utils.StrUtil;
+
+/**
+ * IO运行时异常异常
+ * 
+ * @author Henry(fba02)
+ * @version [版本号, 2017年8月26日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
+ */
+public class IORuntimeException extends RuntimeException {
+    private static final long serialVersionUID = 8247610319171014183L;
+    
+    public IORuntimeException(Throwable e) {
+        super(ExceptionUtil.getMessage(e), e);
+    }
+    
+    public IORuntimeException(String message) {
+        super(message);
+    }
+    
+    public IORuntimeException(String messageTemplate, Object... params) {
+        super(StrUtil.format(messageTemplate, params));
+    }
+    
+    public IORuntimeException(String message, Throwable throwable) {
+        super(message, throwable);
+    }
+    
+    public IORuntimeException(Throwable throwable, String messageTemplate, Object... params) {
+        super(StrUtil.format(messageTemplate, params), throwable);
+    }
+    
+    /**
+     * 导致这个异常的异常是否是指定类型的异常
+     * 
+     * @param clazz 异常类
+     * @return 是否为指定类型异常
+     */
+    public boolean causeInstanceOf(Class<? extends Throwable> clazz) {
+        Throwable cause = this.getCause();
+        if (null != cause && clazz.isInstance(cause)) {
+            return true;
+        }
+        return false;
+    }
+}

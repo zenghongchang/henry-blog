@@ -1,0 +1,60 @@
+/**
+ * Copyright © 2015-2017 ToFBA E-commerce logistics Co. LTD All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * ShenZhen ToFBA E-commerce logistics Co., LTD.
+ * No body can copy or modify any part of this source without the permission of
+ * ShenZhen ToFBA E-commerce logistics Co., LTD.
+ *   _________    ___   ________  ______        _       
+ *  |  _   _  | .'   `.|_   __  ||_   _ \      / \      
+ *  |_/ | | \_|/  .-.  \ | |_ \_|  | |_) |    / _ \     
+ *      | |    | |   | | |  _|     |  __'.   / ___ \    
+ *     _| |_   \  `-'  /_| |_     _| |__) |_/ /   \ \_  
+ *    |_____|   `.___.'|_____|   |_______/|____| |____|                                             
+ */
+package com.jiufang.common.exception;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.UndeclaredThrowableException;
+
+import com.jiufang.common.utils.StrUtil;
+
+/**
+ * 异常工具类
+ * 
+ * @author Henry(fba02)
+ * @version [版本号, 2017年8月24日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
+ */
+public class ExceptionUtil {
+    
+    /**
+     * 获得完整消息，包括异常名
+     * 
+     * @param e 异常
+     * @return 完整消息
+     */
+    public static String getMessage(Throwable e) {
+        return StrUtil.format("{}: {}", e.getClass().getSimpleName(), e.getMessage());
+    }
+    
+    /**
+     * 剥离反射引发的InvocationTargetException、UndeclaredThrowableException中间异常，返回业务本身的异常
+     * 
+     * @param wrapped 包装的异常
+     * @return 剥离后的异常
+     */
+    public static Throwable unwrap(Throwable wrapped) {
+        Throwable unwrapped = wrapped;
+        while (true) {
+            if (unwrapped instanceof InvocationTargetException) {
+                unwrapped = ((InvocationTargetException)unwrapped).getTargetException();
+            } else if (unwrapped instanceof UndeclaredThrowableException) {
+                unwrapped = ((UndeclaredThrowableException)unwrapped).getUndeclaredThrowable();
+            } else {
+                return unwrapped;
+            }
+        }
+    }
+}

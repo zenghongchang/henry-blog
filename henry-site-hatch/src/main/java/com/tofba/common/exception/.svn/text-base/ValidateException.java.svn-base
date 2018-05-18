@@ -1,0 +1,60 @@
+/**
+ * Copyright © 2015-2017 ToFBA E-commerce logistics Co. LTD All Rights Reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * ShenZhen ToFBA E-commerce logistics Co., LTD.
+ * No body can copy or modify any part of this source without the permission of
+ * ShenZhen ToFBA E-commerce logistics Co., LTD.
+ *   _________    ___   ________  ______        _       
+ *  |  _   _  | .'   `.|_   __  ||_   _ \      / \      
+ *  |_/ | | \_|/  .-.  \ | |_ \_|  | |_) |    / _ \     
+ *      | |    | |   | | |  _|     |  __'.   / ___ \    
+ *     _| |_   \  `-'  /_| |_     _| |__) |_/ /   \ \_  
+ *    |_____|   `.___.'|_____|   |_______/|____| |____|                                             
+ */
+package com.jiufang.common.exception;
+
+import com.jiufang.common.utils.StrUtil;
+
+/**
+ * 验证异常
+ * 
+ * @author  Henry(fba02)
+ * @version  [版本号, 2017年8月24日]
+ * @see  [相关类/方法]
+ * @since  [产品/模块版本]
+ */
+public class ValidateException extends StatefulException {
+	private static final long serialVersionUID = 6057602589533840889L;
+
+	public ValidateException() {
+	}
+
+	public ValidateException(String msg) {
+		super(msg);
+	}
+	
+	public ValidateException(String messageTemplate, Object... params) {
+		super(StrUtil.format(messageTemplate, params));
+	}
+
+	public ValidateException(Throwable throwable) {
+		super(throwable);
+	}
+
+	public ValidateException(String msg, Throwable throwable) {
+		super(msg, throwable);
+	}
+
+	public ValidateException(int status, String msg) {
+		super(status, msg);
+	}
+
+	public ValidateException(int status, Throwable throwable) {
+		super(status, throwable);
+	}
+
+	public ValidateException(int status, String msg, Throwable throwable) {
+		super(status, msg, throwable);
+	}
+}
