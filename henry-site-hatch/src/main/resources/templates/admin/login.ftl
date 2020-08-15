@@ -19,9 +19,9 @@
 	<link href="${cssPath}plugin/style/style-metro.css" rel="stylesheet" type="text/css"/>
 	<link href="${cssPath}plugin/style/style.css" rel="stylesheet" type="text/css"/>
 	<link href="${cssPath}plugin/style/style-responsive.css" rel="stylesheet" type="text/css"/>
-	<link href="${cssPath}app/other/default.css" rel="stylesheet" type="text/css"/>
-	<link href="${cssPath}app/other/uniform.default.css" rel="stylesheet" type="text/css"/>
-	<link href="${cssPath}app/login/login-soft.css" rel="stylesheet" type="text/css"/>
+	<link href="${cssPath}app/common/default.css" rel="stylesheet" type="text/css"/>
+	<link href="${cssPath}app/common/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<link href="${cssPath}app/login.css" rel="stylesheet" type="text/css"/>
 	<#-- JS -->
 	<script src="${plugPath}jquery/jquery-1.10.1.min.js" type="text/javascript"></script>
 	<script src="${plugPath}jquery/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>

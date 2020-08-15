@@ -1,18 +1,3 @@
-/**
- * Copyright ToFBA Ecommerce Logistics LTD. All Rights Reserved.
- *
- * This software is the confidential and proprietary information of
- * Shenzhen ToFBA Ecommerce Logistics Co., Ltd.
- * No body can copy or modify any part of this source without the permission of
- * Shenzhen ToFBA Ecommerce Logistics Co., Ltd.
- *   _________    ___   ________  ______        _       
- *  |  _   _  | .'   `.|_   __  ||_   _ \      / \      
- *  |_/ | | \_|/  .-.  \ | |_ \_|  | |_) |    / _ \     
- *      | |    | |   | | |  _|     |  __'.   / ___ \    
- *     _| |_   \  `-'  /_| |_     _| |__) |_/ /   \ \_  
- *    |_____|   `.___.'|_____|   |_______/|____| |____|
- *                                                
- */
 package com.tofba.config;
 
 import javax.sql.DataSource;
@@ -20,7 +5,6 @@ import javax.sql.DataSource;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -39,15 +23,12 @@ import com.github.pagehelper.PageInterceptor;
  * @since [产品/模块版本]
  */
 @Configuration
-@MapperScan("cn.tofba.dao")
 @EnableTransactionManagement
 public class DataSourceConfig {
     @Autowired
-    private Environment env;
-    
+    private Environment env;    
     @Autowired
-    private PageInterceptor pageInterceptor;
-    
+    private PageInterceptor pageInterceptor;    
     @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource)
         throws Exception {

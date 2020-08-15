@@ -9,18 +9,8 @@ var App = function () {
     var isIE10 = false;
 
     var sidebarWidth = 225;// 导航栏展开宽度
-    var sidebarCollapsedWidth = 35;// 导航栏收起来宽度
+    var sidebarCollapsedWidth = 35;// 导航栏收起宽度
     var responsiveHandlers = [];
-    // theme layout color set
-    var layoutColorCodes = {
-        'blue': '#4b8df8',
-        'red': '#e02222',
-        'green': '#35aa47',
-        'purple': '#852b99',
-        'grey': '#555555',
-        'light-grey': '#fafafa',
-        'yellow': '#ffb848'
-    };
     var handleInit = function () {
         if ($('body').css('direction') === 'rtl') {
             isRTL = true;
@@ -31,7 +21,7 @@ var App = function () {
         if (isIE10) {
             jQuery('html').addClass('ie10'); // detect IE10 version
         }
-    }
+    };
     var handleDesktopTabletContents = function () {
         // loops all page elements with "responsive" class and applies classes for tablet mode
         // For metornic  1280px or less set as tablet mode to display the content properly
@@ -74,6 +64,7 @@ var App = function () {
             each.call();
         }
     }
+    
     var handleResponsive = function () {
         handleTooltips();
         handleSidebarState();
@@ -83,12 +74,16 @@ var App = function () {
         handleFixedSidebar();
         runResponsiveHandlers();
     }
+    
     var handleResponsiveOnInit = function () {
         handleSidebarState();
         handleDesktopTabletContents();
         handleSidebarAndContentHeight();
     }
 
+    /*
+     * 调整尺寸大小
+     */
     var handleResponsiveOnResize = function () {
         var resize;
         if (isIE8) {
@@ -111,7 +106,6 @@ var App = function () {
                     clearTimeout(resize);
                 }
                 resize = setTimeout(function () {
-                    console.log('resize');
                     handleResponsive();
                 }, 50); // wait 50ms until window resize finishes.
             });
@@ -773,6 +767,9 @@ var App = function () {
         initFancybox: function () {
             handleFancybox();
         },
+        /*
+         * 获取真实值 
+         */
         getActualVal: function (el) {
             var el = jQuery(el);
             if (el.val() === el.attr("placeholder")) {
@@ -780,6 +777,9 @@ var App = function () {
             }
             return el.val();
         },
+        /*
+         * 获取URL参数
+         */
         getURLParameter: function (paramName) {
             var searchString = window.location.search.substring(1),
                 i, val, params = searchString.split("&");
@@ -805,13 +805,6 @@ var App = function () {
         },
         isRTL: function () {
             return isRTL;
-        },
-        getLayoutColorCode: function (name) {
-            if (layoutColorCodes[name]) {
-                return layoutColorCodes[name];
-            } else {
-                return '';
-            }
         }
     };
 }();

@@ -4,8 +4,7 @@ server:
     key-store: classpath:luischen.cn.pfx
     key-store-password: l29df164yf5d4z
     key-store-type: PKCS12
-
-
+    
 spring:
     datasource:
         name: test

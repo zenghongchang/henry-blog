@@ -1,0 +1,10 @@
+.wrap {
+	min-width: 100%;
+	position: absolute;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.page-container {
+	margin-top: 41px;
+}

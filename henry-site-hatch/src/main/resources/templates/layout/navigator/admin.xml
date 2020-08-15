@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigator>
+	<admin sort_order="101">
+		<manage.user link="/user/manageUser">
+			<acl>
+			</acl>
+		</manage.user>
+	</admin>
+</navigator>

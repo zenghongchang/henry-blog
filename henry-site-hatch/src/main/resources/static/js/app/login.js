@@ -5,6 +5,7 @@ var Login = function () {
         	 * 登陆Form 
         	 */
             $('.login-form').validate({
+				// debug : true, // 调试模式，即使验证成功也不会跳转到目标页面
                 errorElement: 'label', //default input error message container
                 errorClass: 'help-inline', // default input error message class
                 focusInvalid: false, // do not focus the last invalid input
@@ -47,9 +48,8 @@ var Login = function () {
             $('.login-form input').keypress(function (e) {
                 if (e.which == 13) {
                     if ($('.login-form').validate().form()) {
-                    	$('.login-form').validate().form().submit();
+                    	$('.login-form').submit();
                     }
-                    return false;
                 }
             });
             /*
@@ -74,8 +74,7 @@ var Login = function () {
                 invalidHandler: function (event, validator) { //display error alert on form submit   
                 },
                 highlight: function (element) { // hightlight error inputs
-                    $(element)
-                        .closest('.control-group').addClass('error'); // set error class to the control group
+                    $(element).closest('.control-group').addClass('error'); // set error class to the control group
                 },
                 success: function (label) {
                     label.closest('.control-group').removeClass('error');

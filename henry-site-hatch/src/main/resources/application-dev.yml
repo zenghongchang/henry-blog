@@ -6,7 +6,7 @@ spring:
         url: jdbc:mysql://127.0.0.1:3306/henry_site?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
         username: root
         password: root
-        # 使用druid数据源
+        #使用druid数据源
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.jdbc.Driver
         filters: stat
@@ -47,7 +47,7 @@ spring:
           multipart:
             max-file-size: 10Mb
             max-request-size: 100Mb
-# mybatis
+#mybatis
 mybatis:
   mapper-locations: classpath*:mybatis/mapper/*.xml
   type-aliases-package: com.tofba.model
@@ -55,7 +55,7 @@ mapper:
   mappers: com.tofba.dao
   not-empty: false
   identity: MYSQL
-# pagehelper
+#pagehelper
 pagehelper:
     helperDialect: mysql
     reasonable: true
