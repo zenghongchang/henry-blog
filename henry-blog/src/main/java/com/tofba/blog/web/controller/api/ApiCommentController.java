@@ -7,19 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tofba.blog.service.CommentService;
 
-/**
- * <pre>
- *     评论API
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/6/6
- */
 @CrossOrigin
 @RestController
 @RequestMapping(value = "/api/comments")
-public class ApiCommentController {
-
+public class ApiCommentController {    
     @Autowired
     private CommentService commentService;
 }

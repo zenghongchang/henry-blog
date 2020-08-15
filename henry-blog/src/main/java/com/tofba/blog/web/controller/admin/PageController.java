@@ -49,14 +49,6 @@ import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 
-/**
- * <pre>
- * 后台页面管理控制器
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/12/10
- */
 @Slf4j
 @Controller
 @RequestMapping(value = "/admin/page")

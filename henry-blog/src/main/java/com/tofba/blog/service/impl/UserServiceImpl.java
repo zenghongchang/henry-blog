@@ -11,14 +11,6 @@ import com.tofba.blog.model.enums.TrueFalseEnum;
 import com.tofba.blog.repository.UserRepository;
 import com.tofba.blog.service.UserService;
 
-/**
- * <pre>
- * 用户业务逻辑实现类
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/11/14
- */
 @Service
 public class UserServiceImpl implements UserService {
     

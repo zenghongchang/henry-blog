@@ -12,14 +12,7 @@ import com.tofba.blog.model.domain.Link;
 import com.tofba.blog.repository.LinkRepository;
 import com.tofba.blog.service.LinkService;
 
-/**
- * <pre>
- *     友情链接业务逻辑实现类
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/11/14
- */
+
 @Service
 public class LinkServiceImpl implements LinkService {
 

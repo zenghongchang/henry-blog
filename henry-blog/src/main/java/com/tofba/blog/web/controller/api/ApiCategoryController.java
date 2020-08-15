@@ -1,4 +1,5 @@
 package com.tofba.blog.web.controller.api;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,15 +27,6 @@ import com.tofba.blog.service.PostService;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONObject;
 
-
-/**
- * <pre>
- *     文章分类API
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/6/6
- */
 @CrossOrigin
 @RestController
 @RequestMapping(value = "/api/categories")

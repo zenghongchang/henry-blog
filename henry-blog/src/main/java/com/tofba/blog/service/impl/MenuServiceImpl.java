@@ -12,14 +12,6 @@ import com.tofba.blog.model.domain.Menu;
 import com.tofba.blog.repository.MenuRepository;
 import com.tofba.blog.service.MenuService;
 
-/**
- * <pre>
- * 菜单业务逻辑实现类
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/1/24
- */
 @Service
 public class MenuServiceImpl implements MenuService {    
     private static final String MENUS_CACHE_KEY = "'menu'";    

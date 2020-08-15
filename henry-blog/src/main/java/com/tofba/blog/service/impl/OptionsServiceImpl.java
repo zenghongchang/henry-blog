@@ -14,14 +14,7 @@ import com.tofba.blog.service.OptionsService;
 
 import cn.hutool.core.util.StrUtil;
 
-/**
- * <pre>
- * 系统设置业务逻辑实现类
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/11/14
- */
+
 @Service
 public class OptionsServiceImpl implements OptionsService {
     @Autowired

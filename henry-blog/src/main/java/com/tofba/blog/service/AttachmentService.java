@@ -1,27 +1,27 @@
 package com.tofba.blog.service;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.tofba.blog.model.domain.Attachment;
 
-import javax.servlet.http.HttpServletRequest;
-
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
 /**
- * <pre>
- *     附件业务逻辑接口
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/1/10
+ * 附件业务逻辑接口
+ * 
+ * @author Henry(fba02)
+ * @version [版本号, 2020年8月15日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
 public interface AttachmentService {
-
+    
     /**
      * 添加附件信息
      *
@@ -29,14 +29,14 @@ public interface AttachmentService {
      * @return Attachment
      */
     Attachment save(Attachment attachment);
-
+    
     /**
      * 查询所有附件信息
      *
      * @return List
      */
     List<Attachment> findAll();
-
+    
     /**
      * 查询所有附件，分页
      *
@@ -44,7 +44,7 @@ public interface AttachmentService {
      * @return Page
      */
     Page<Attachment> findAll(Pageable pageable);
-
+    
     /**
      * 根据编号查询
      *
@@ -52,7 +52,7 @@ public interface AttachmentService {
      * @return Attachment
      */
     Optional<Attachment> findByAttachId(Long attachId);
-
+    
     /**
      * 根据编号移除
      *
@@ -60,43 +60,43 @@ public interface AttachmentService {
      * @return Attachment
      */
     Attachment remove(Long attachId);
-
+    
     /**
      * 上传转发
      *
-     * @param file    file
+     * @param file file
      * @param request request
      * @return Map
      */
     Map<String, String> upload(MultipartFile file, HttpServletRequest request);
-
+    
     /**
      * 原生服务器上传
      *
-     * @param file    file
+     * @param file file
      * @param request request
      * @return Map
      */
     Map<String, String> attachUpload(MultipartFile file, HttpServletRequest request);
-
+    
     /**
      * 七牛云上传
      *
-     * @param file    file
+     * @param file file
      * @param request request
      * @return Map
      */
     Map<String, String> attachQiNiuUpload(MultipartFile file, HttpServletRequest request);
-
+    
     /**
      * 又拍云上传
      *
-     * @param file    file
+     * @param file file
      * @param request request
      * @return Map
      */
     Map<String, String> attachUpYunUpload(MultipartFile file, HttpServletRequest request);
-
+    
     /**
      * 七牛云删除附件
      *
@@ -104,7 +104,7 @@ public interface AttachmentService {
      * @return boolean
      */
     boolean deleteQiNiuAttachment(String key);
-
+    
     /**
      * 又拍云删除附件
      *
@@ -112,7 +112,7 @@ public interface AttachmentService {
      * @return boolean
      */
     boolean deleteUpYunAttachment(String fileName);
-
+    
     /**
      * 获取附件总数
      *

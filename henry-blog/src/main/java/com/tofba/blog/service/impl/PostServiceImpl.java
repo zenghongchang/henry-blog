@@ -29,27 +29,14 @@ import com.tofba.blog.utils.SystemUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.http.HtmlUtil;
 
-/**
- * <pre>
- * 文章业务逻辑实现类
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/11/14
- */
 @Service
-public class PostServiceImpl implements PostService {
-    
-    private static final String POSTS_CACHE_NAME = "posts";
-    
-    private static final String COMMENTS_CACHE_NAME = "comments";
-    
+public class PostServiceImpl implements PostService {    
+    private static final String POSTS_CACHE_NAME = "posts";    
+    private static final String COMMENTS_CACHE_NAME = "comments";    
     @Autowired
-    private PostRepository postRepository;
-    
+    private PostRepository postRepository;    
     @Autowired
-    private CategoryService categoryService;
-    
+    private CategoryService categoryService;    
     @Autowired
     private TagService tagService;
     
@@ -466,7 +453,7 @@ public class PostServiceImpl implements PostService {
         // 更新阅读数
         Post p = postRepository.getOne(postId);
         p.setPostViews(p.getPostViews() + 1);
-        postRepository.saveAndFlush(p);        
+        postRepository.saveAndFlush(p);
     }
     
     /**

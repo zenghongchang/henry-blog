@@ -7,12 +7,12 @@ import org.springframework.data.repository.query.Param;
 import com.tofba.blog.model.domain.Category;
 
 /**
- * <pre>
  * 分类持久层
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/11/30
+ * 
+ * @author Henry(fba02)
+ * @version [版本号, 2020年8月15日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
 public interface CategoryRepository extends JpaRepository<Category, Long> {
     

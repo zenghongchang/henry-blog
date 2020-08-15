@@ -39,14 +39,7 @@ import com.tofba.blog.utils.LocaleMessageUtil;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.StrUtil;
 
-/**
- * <pre>
- * 后台附件控制器
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/12/19
- */
+
 @Slf4j
 @Controller
 @RequestMapping(value = "/admin/attachments")

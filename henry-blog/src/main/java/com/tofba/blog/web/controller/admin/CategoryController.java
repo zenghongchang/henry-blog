@@ -20,14 +20,6 @@ import com.tofba.blog.model.enums.ResultCodeEnum;
 import com.tofba.blog.service.CategoryService;
 import com.tofba.blog.utils.LocaleMessageUtil;
 
-/**
- * <pre>
- * 后台分类管理控制器
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/12/10
- */
 @Slf4j
 @Controller
 @RequestMapping(value = "/admin/category")

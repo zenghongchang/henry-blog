@@ -30,21 +30,14 @@ import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.text.StrBuilder;
 import cn.hutool.crypto.SecureUtil;
 
-/**
- * @author : RYAN0UP
- * @date : 2018/12/11
- */
 @Slf4j
 @RestController
 @RequestMapping(value = "/apis/metaweblog", produces = "text/xml;charset=UTF-8")
-public class ApiMetaWeBlog {
-    
+public class ApiMetaWeBlog {    
     @Autowired
-    private UserService userService;
-    
+    private UserService userService;    
     @Autowired
-    private CategoryService categoryService;
-    
+    private CategoryService categoryService;    
     @Autowired
     private PostService postService;
     
@@ -59,17 +52,17 @@ public class ApiMetaWeBlog {
         try {
             final ServletInputStream inputStream = request.getInputStream();
             xml = IoUtil.read(inputStream, "utf-8");
-            final JSONObject requestJSONObject = XML.toJSONObject(xml);            
+            final JSONObject requestJSONObject = XML.toJSONObject(xml);
             final JSONObject methodCall = requestJSONObject.getJSONObject("methodCall");
-            final String methodName = methodCall.getString("methodName");            
-            log.info("MetaWeblog[methodName={}]", methodName);            
-            final JSONArray params = methodCall.getJSONObject("params").getJSONArray("param");            
-            final String userEmail = params.getJSONObject(1).getJSONObject("value").optString("string");            
+            final String methodName = methodCall.getString("methodName");
+            log.info("MetaWeblog[methodName={}]", methodName);
+            final JSONArray params = methodCall.getJSONObject("params").getJSONArray("param");
+            final String userEmail = params.getJSONObject(1).getJSONObject("value").optString("string");
             final String userPwd = params.getJSONObject(2).getJSONObject("value").get("string").toString();
-            final User user = userService.userLoginByEmail(userEmail, SecureUtil.md5(userPwd));            
+            final User user = userService.userLoginByEmail(userEmail, SecureUtil.md5(userPwd));
             if (null == user) {
                 throw new Exception("用户密码错误！");
-            }            
+            }
             if ("blogger.getUsersBlogs".equals(methodName)) {
                 log.info("获取用户博客");
                 responseContent = getUserBlogs();
@@ -109,8 +102,7 @@ public class ApiMetaWeBlog {
                 strBuilder.append(true);
                 strBuilder.append("</boolean></value></param></params></methodResponse>");
                 responseContent = strBuilder.toString();
-            }
-            
+            }            
         } catch (final Exception e) {
             e.printStackTrace();
         }

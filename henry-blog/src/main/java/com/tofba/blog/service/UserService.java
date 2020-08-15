@@ -4,14 +4,6 @@ import java.util.Date;
 
 import com.tofba.blog.model.domain.User;
 
-/**
- * <pre>
- *     用户业务逻辑接口
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/11/14
- */
 public interface UserService {
 
     /**

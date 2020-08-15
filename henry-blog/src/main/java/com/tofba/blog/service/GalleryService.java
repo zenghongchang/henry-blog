@@ -1,21 +1,13 @@
 package com.tofba.blog.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.tofba.blog.model.domain.Gallery;
 
-import java.util.List;
-import java.util.Optional;
-
-/**
- * <pre>
- *     图库业务逻辑接口
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/2/26
- */
 public interface GalleryService {
 
     /**

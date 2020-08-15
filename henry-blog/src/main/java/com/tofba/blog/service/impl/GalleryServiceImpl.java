@@ -14,14 +14,6 @@ import com.tofba.blog.model.domain.Gallery;
 import com.tofba.blog.repository.GalleryRepository;
 import com.tofba.blog.service.GalleryService;
 
-/**
- * <pre>
- *     图库业务逻辑实现类
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/2/26
- */
 @Service
 public class GalleryServiceImpl implements GalleryService {
 

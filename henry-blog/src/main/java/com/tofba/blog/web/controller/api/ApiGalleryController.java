@@ -21,22 +21,12 @@ import com.tofba.blog.model.enums.ResponseStatusEnum;
 import com.tofba.blog.service.AttachmentService;
 import com.tofba.blog.service.GalleryService;
 
-/**
- * <pre>
- *     图库API
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/6/6
- */
 @CrossOrigin
 @RestController
 @RequestMapping(value = "/api/galleries")
-public class ApiGalleryController {
-
+public class ApiGalleryController {    
     @Autowired
-    private GalleryService galleryService;
-
+    private GalleryService galleryService;    
     @Autowired
     private AttachmentService attachmentService;
 
@@ -67,14 +57,12 @@ public class ApiGalleryController {
      * @return JsonResult
      */
     @GetMapping
-    public JsonResult galleries(@RequestParam(value = "page", defaultValue = "0") Integer page,
-                                 @RequestParam(value = "size", defaultValue = "18") Integer size) {
+    public JsonResult galleries(@RequestParam(value = "page", defaultValue = "0") Integer page, @RequestParam(value = "size", defaultValue = "18") Integer size) {
         Sort sort = new Sort(Sort.Direction.DESC, "attachId");
         Pageable pageable = PageRequest.of(page, size, sort);
         Page<Attachment> attachments = attachmentService.findAll(pageable);
         System.err.println(attachments.toString());
-        return new JsonResult(ResponseStatusEnum.SUCCESS.getCode(), ResponseStatusEnum.SUCCESS.getMsg(),attachments);
-
+        return new JsonResult(ResponseStatusEnum.SUCCESS.getCode(), ResponseStatusEnum.SUCCESS.getMsg(), attachments);
     }
 
     /**
@@ -113,8 +101,4 @@ public class ApiGalleryController {
             return new JsonResult(ResponseStatusEnum.NOTFOUND.getCode(), ResponseStatusEnum.NOTFOUND.getMsg());
         }
     }
-
-
-
-
 }

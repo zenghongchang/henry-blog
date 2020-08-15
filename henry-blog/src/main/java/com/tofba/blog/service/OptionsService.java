@@ -4,14 +4,6 @@ import java.util.Map;
 
 import com.tofba.blog.model.domain.Options;
 
-/**
- * <pre>
- *     系统设置业务逻辑接口
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/11/14
- */
 public interface OptionsService {
 
     /**

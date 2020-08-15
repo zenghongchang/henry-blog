@@ -20,14 +20,6 @@ import com.tofba.blog.utils.LocaleMessageUtil;
 
 import freemarker.template.Configuration;
 
-/**
- * <pre>
- * 后台设置选项控制器
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/12/13
- */
 @Slf4j
 @Controller
 @RequestMapping("/admin/option")

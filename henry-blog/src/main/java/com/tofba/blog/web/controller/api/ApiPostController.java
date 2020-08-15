@@ -23,14 +23,6 @@ import com.tofba.blog.service.PostService;
 
 import cn.hutool.core.util.StrUtil;
 
-/**
- * <pre>
- *     文章API
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/6/6
- */
 @CrossOrigin
 @RestController
 @RequestMapping(value = "/api/posts")

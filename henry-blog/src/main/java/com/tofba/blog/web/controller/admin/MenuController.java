@@ -14,14 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.tofba.blog.model.domain.Menu;
 import com.tofba.blog.service.MenuService;
 
-/**
- * <pre>
- * 后台菜单管理控制器
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/1/30
- */
 @Slf4j
 @Controller
 @RequestMapping(value = "/admin/menus")

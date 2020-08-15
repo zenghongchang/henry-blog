@@ -16,14 +16,6 @@ import com.tofba.blog.model.domain.Post;
 import com.tofba.blog.repository.CommentRepository;
 import com.tofba.blog.service.CommentService;
 
-/**
- * <pre>
- *     评论业务逻辑实现类
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/1/22
- */
 @Service
 public class CommentServiceImpl implements CommentService {
 

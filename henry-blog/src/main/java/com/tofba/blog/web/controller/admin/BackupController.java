@@ -40,14 +40,6 @@ import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.ZipUtil;
 
-/**
- * <pre>
- * 后台备份控制器
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/1/21
- */
 @Slf4j
 @Controller
 @RequestMapping(value = "/admin/backup")

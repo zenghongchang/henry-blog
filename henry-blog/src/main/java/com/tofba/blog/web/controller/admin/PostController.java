@@ -48,14 +48,6 @@ import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.http.HtmlUtil;
 
-/**
- * <pre>
- * 后台文章管理控制器
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/12/10
- */
 @Slf4j
 @Controller
 @RequestMapping(value = "/admin/posts")

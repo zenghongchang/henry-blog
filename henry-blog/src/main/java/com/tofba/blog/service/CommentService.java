@@ -1,22 +1,14 @@
 package com.tofba.blog.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.tofba.blog.model.domain.Comment;
 import com.tofba.blog.model.domain.Post;
 
-import java.util.List;
-import java.util.Optional;
-
-/**
- * <pre>
- *     评论业务逻辑接口
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/1/22
- */
 public interface CommentService {
 
     /**

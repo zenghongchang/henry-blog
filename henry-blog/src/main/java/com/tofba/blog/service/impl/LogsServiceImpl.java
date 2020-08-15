@@ -16,14 +16,7 @@ import com.tofba.blog.service.LogsService;
 
 import cn.hutool.extra.servlet.ServletUtil;
 
-/**
- * <pre>
- *     日志业务逻辑实现类
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/1/19
- */
+
 @Service
 public class LogsServiceImpl implements LogsService {
 

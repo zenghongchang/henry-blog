@@ -14,14 +14,6 @@ import com.tofba.blog.model.enums.BlogPropertiesEnum;
 import com.tofba.blog.model.enums.ResponseStatusEnum;
 import com.tofba.blog.service.OptionsService;
 
-/**
- * <pre>
- *     系统设置API
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/7/19
- */
 @CrossOrigin
 @RestController
 @RequestMapping(value = "/api/options")

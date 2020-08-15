@@ -21,12 +21,12 @@ import freemarker.template.TemplateException;
 import freemarker.template.TemplateModel;
 
 /**
- * <pre>
  * FreeMarker自定义标签
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/4/26
+ * 
+ * @author Henry(fba02)
+ * @version [版本号, 2020年8月15日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
 @Component
 public class CommonTagDirective implements TemplateDirectiveModel {    
@@ -42,6 +42,7 @@ public class CommonTagDirective implements TemplateDirectiveModel {
     @Autowired
     private LinkService linkService;
     
+    @SuppressWarnings("rawtypes")
     @Override
     public void execute(Environment environment, Map map, TemplateModel[] templateModels, TemplateDirectiveBody templateDirectiveBody)
         throws TemplateException, IOException {

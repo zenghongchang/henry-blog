@@ -5,14 +5,6 @@ import java.util.Optional;
 
 import com.tofba.blog.model.domain.Tag;
 
-/**
- * <pre>
- *     标签业务逻辑接口
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/1/12
- */
 public interface TagService {
 
     /**

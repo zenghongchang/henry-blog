@@ -5,14 +5,6 @@ import java.util.Optional;
 
 import com.tofba.blog.model.domain.Category;
 
-/**
- * <pre>
- *     分类业务逻辑接口
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/11/30
- */
 public interface CategoryService {
 
     /**

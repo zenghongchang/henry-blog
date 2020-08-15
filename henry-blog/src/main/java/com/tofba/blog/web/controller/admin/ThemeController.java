@@ -41,14 +41,6 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.ZipUtil;
 import freemarker.template.Configuration;
 
-/**
- * <pre>
- * 后台主题管理控制器
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/12/16
- */
 @Slf4j
 @Controller
 @RequestMapping(value = "/admin/themes")

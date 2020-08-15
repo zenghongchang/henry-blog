@@ -14,7 +14,7 @@ import com.tofba.blog.service.CategoryService;
 
 /**
  * <pre>
- *     分类业务逻辑实现类
+ * 分类业务逻辑实现类
  * </pre>
  *
  * @author : RYAN0UP
@@ -22,12 +22,12 @@ import com.tofba.blog.service.CategoryService;
  */
 @Service
 public class CategoryServiceImpl implements CategoryService {
-
+    
     private static final String POSTS_CACHE_NAME = "posts";
-
+    
     @Autowired
     private CategoryRepository categoryRepository;
-
+    
     /**
      * 保存/修改分类目录
      *
@@ -39,7 +39,7 @@ public class CategoryServiceImpl implements CategoryService {
     public Category save(Category category) {
         return categoryRepository.save(category);
     }
-
+    
     /**
      * 根据编号移除分类目录
      *
@@ -53,7 +53,7 @@ public class CategoryServiceImpl implements CategoryService {
         categoryRepository.delete(category.get());
         return category.get();
     }
-
+    
     /**
      * 查询所有分类目录
      *
@@ -63,7 +63,7 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> findAll() {
         return categoryRepository.findAll();
     }
-
+    
     /**
      * 根据编号查询分类目录
      *
@@ -74,7 +74,7 @@ public class CategoryServiceImpl implements CategoryService {
     public Optional<Category> findByCateId(Long cateId) {
         return categoryRepository.findById(cateId);
     }
-
+    
     /**
      * 根据分类目录路径查询，用于验证是否已经存在该路径
      *
@@ -85,7 +85,7 @@ public class CategoryServiceImpl implements CategoryService {
     public Category findByCateUrl(String cateUrl) {
         return categoryRepository.findCategoryByCateUrl(cateUrl);
     }
-
+    
     /**
      * 根据分类名称查询
      *
@@ -96,7 +96,7 @@ public class CategoryServiceImpl implements CategoryService {
     public Category findByCateName(String cateName) {
         return categoryRepository.findCategoryByCateName(cateName);
     }
-
+    
     /**
      * 将分类字符串集合转化为Category泛型集合
      *
@@ -108,7 +108,7 @@ public class CategoryServiceImpl implements CategoryService {
         if (null == strings) {
             return null;
         }
-        List<Category> categories = new ArrayList<>();
+        List<Category> categories = new ArrayList<Category>();
         Optional<Category> category = null;
         for (String str : strings) {
             category = findByCateId(Long.parseLong(str));

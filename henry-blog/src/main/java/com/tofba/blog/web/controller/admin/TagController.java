@@ -18,14 +18,6 @@ import com.tofba.blog.model.enums.ResultCodeEnum;
 import com.tofba.blog.service.TagService;
 import com.tofba.blog.utils.LocaleMessageUtil;
 
-/**
- * <pre>
- * 后台标签管理控制器
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/12/10
- */
 @Slf4j
 @Controller
 @RequestMapping(value = "/admin/tag")

@@ -1,5 +1,9 @@
 package com.tofba.blog.service;
 
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,18 +13,6 @@ import com.tofba.blog.model.domain.Post;
 import com.tofba.blog.model.domain.Tag;
 import com.tofba.blog.model.dto.Archive;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-
-/**
- * <pre>
- *     文章/页面业务逻辑接口
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2017/11/14
- */
 public interface PostService {
 
     /**

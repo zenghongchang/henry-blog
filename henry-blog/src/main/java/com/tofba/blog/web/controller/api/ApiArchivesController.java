@@ -13,14 +13,6 @@ import com.tofba.blog.model.dto.JsonResult;
 import com.tofba.blog.model.enums.ResponseStatusEnum;
 import com.tofba.blog.service.PostService;
 
-/**
- * <pre>
- *     文章归档API
- * </pre>
- *
- * @author : RYAN0UP
- * @date : 2018/6/6
- */
 @CrossOrigin
 @RestController
 @RequestMapping(value = "/api/archives")
